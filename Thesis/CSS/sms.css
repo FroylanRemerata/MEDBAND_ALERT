@@ -1,0 +1,304 @@
+
+
+
+.sms-content {
+  padding: 20px;
+  width: 81em;
+  margin: 0 auto;
+}
+
+
+.notifications-container {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-bottom: 30px;
+  border: 1px solid #e0e0e0;
+}
+
+
+.notification-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.notification-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.notification-card:last-child {
+  margin-bottom: 0;
+}
+
+
+.patient-id {
+  font-size: 14px;
+  font-weight: 400;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+
+.notification-message {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+
+.notification-date {
+  font-size: 14px;
+  font-weight: 400;
+  color: #666;
+}
+
+
+.add-notification-section {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border: 1px solid #e0e0e0;
+}
+
+.add-notification-section h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+
+.notification-form {
+  display: grid;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.form-group select,
+.form-group textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  transition: border-color 0.3s ease;
+}
+
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #2e6a96;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+
+.send-notification-btn {
+  background: #2e6a96;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  justify-self: start;
+}
+
+.send-notification-btn:hover {
+  background: #1e4a6b;
+}
+
+
+.notification-status {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-left: 8px;
+}
+
+.notification-status.sent {
+  background: #d4edda;
+  color: #155724;
+}
+
+.notification-status.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.notification-status.failed {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+}
+
+.empty-state h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.empty-state p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+
+.notification-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.notification-actions button {
+  padding: 6px 12px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.notification-actions .resend-btn {
+  color: #2e6a96;
+  border-color: #2e6a96;
+}
+
+.notification-actions .resend-btn:hover {
+  background: #2e6a96;
+  color: white;
+}
+
+.notification-actions .delete-btn {
+  color: #dc3545;
+  border-color: #dc3545;
+}
+
+.notification-actions .delete-btn:hover {
+  background: #dc3545;
+  color: white;
+}
+
+
+@media (max-width: 768px) {
+  .sms-content {
+    padding: 10px;
+  }
+  
+  .notifications-container,
+  .add-notification-section {
+    padding: 20px;
+  }
+  
+  .notification-card {
+    padding: 16px;
+  }
+  
+  .notification-message {
+    font-size: 15px;
+  }
+  
+  .add-notification-section h3 {
+    font-size: 16px;
+  }
+  
+  .notification-form {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .notifications-container,
+  .add-notification-section {
+    padding: 16px;
+  }
+  
+  .notification-card {
+    padding: 12px;
+  }
+  
+  .notification-message {
+    font-size: 14px;
+  }
+  
+  .patient-id,
+  .notification-date {
+    font-size: 13px;
+  }
+}
+
+
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.notification-card.new {
+  animation: slideInFromTop 0.5s ease-out;
+}
+
+
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #2e6a96;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

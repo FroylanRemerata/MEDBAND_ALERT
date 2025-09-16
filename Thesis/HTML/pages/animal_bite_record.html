@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/CSS/bite_record.css">
+</head>
+<body>
+  
+<div id="biteRecordPage" class="page">
+  <header class="topbar">
+    <h1>Records</h1>
+    <img src="/icons/profile.png" alt="Profile" class="profile-pic">
+  </header>
+  
+  
+  <div class="search-bar">
+    <div class="search-container">
+      <input type="text" placeholder="Search patient, wristband, ID" class="search-input">
+      <span class="search-icon">🔍</span>
+    </div>
+   
+      <button class="btn btn-register" href="/HTML/pages/register.html">Register</button>
+   
+  </div>
+
+  
+  <section class="records-section">
+    <div class="records-container">
+      <h2>Records</h2>
+      <table class="records-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Contact No.</th>
+            <th>Address</th>
+            <th>Wristband ID</th>
+            <th>Date Registered</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>01</td>
+            <td>Carlos Agasin</td>
+            <td>09123456789</td>
+            <td>Soldier's Malaria</td>
+            <td>WB001</td>
+            <td>01-04-2025</td>
+            <td><button class="btn btn-view">View</button>
+              <button class="btn btn-delete">Delete</button>
+            </td>
+           
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+
+
+<div id="patientModal" class="modal" aria-hidden="true">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="patientModalTitle">
+    <div class="modal-header">
+      <h3 id="patientModalTitle">Patient Information</h3>
+      <button class="modal-close" aria-label="Close" title="Close" data-close>&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-grid">
+        <div>
+          <div class="label">ID</div>
+          <div class="value" id="m-id">N/A</div>
+        </div>
+        <div>
+          <div class="label">Name</div>
+          <div class="value" id="m-name">N/A</div>
+        </div>
+        <div>
+          <div class="label">Contact</div>
+          <div class="value" id="m-contact">N/A</div>
+        </div>
+        <div>
+          <div class="label">Address</div>
+          <div class="value" id="m-address">N/A</div>
+        </div>
+        <div>
+          <div class="label">Wristband ID</div>
+          <div class="value" id="m-wristband">N/A</div>
+        </div>
+        <div>
+          <div class="label">Date Registered</div>
+          <div class="value" id="m-date">N/A</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../../Javascript/bite_record.js"></script>
+</body>
+</html>

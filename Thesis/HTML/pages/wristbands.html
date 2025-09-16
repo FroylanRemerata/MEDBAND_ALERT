@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wristbands - Animal Bite Clinic</title>
+  <link rel="stylesheet" href="/CSS/dashy.css">
+  <link rel="stylesheet" href="/CSS/wristbands.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="dashboard">
+
+    <main class="main-content">
+      
+      <header class="topbar">
+        <div class="search-container">
+          <div class="search">
+            🔍 <input type="text" placeholder="Search patient, wristband, ID">
+          </div>
+          <div class="action-buttons">
+            <button class="btn btn-register" href="/HTML/pages/register.html">Register</button>
+          </div>
+        </div>
+        <img src="/icons/profile.png" alt="Profile" class="profile-pic">
+      </header>
+
+      
+      <h1 class="page-title">Wristbands</h1>
+
+      
+      <div class="wristbands-card">
+        <table class="wristbands-table">
+          <thead>
+            <tr>
+              <th>WristbandID</th>
+              <th>RFID</th>
+              <th>Status</th>
+              <th>Battery</th>
+              <th>Patient ID</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>WB002</td>
+              <td>WB001</td>
+              <td><span class="status active">Active</span></td>
+              <td>
+                <div class="battery">
+                  <div class="battery-bar">
+                    <div class="battery-fill high" style="width:80%"></div>
+                  </div>
+                  80%
+                </div>
+              </td>
+              <td>02</td>
+            </tr>
+            <tr>
+              <td>WB031</td>
+              <td>WB031</td>
+              <td><span class="status inactive">Inactive</span></td>
+              <td>
+                <div class="battery">
+                  <div class="battery-bar">
+                    <div class="battery-fill high" style="width:90%"></div>
+                  </div>
+                  90%
+                </div>
+              </td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>WB003</td>
+              <td>WB003</td>
+              <td><span class="status active">Active</span></td>
+              <td>
+                <div class="battery">
+                  <div class="battery-bar">
+                    <div class="battery-fill mid" style="width:60%"></div>
+                  </div>
+                  60%
+                </div>
+              </td>
+              <td>01</td>
+            </tr>
+            <tr>
+              <td>WB004</td>
+              <td>WB004</td>
+              <td><span class="status active">Active</span></td>
+              <td>
+                <div class="battery">
+                  <div class="battery-bar">
+                    <div class="battery-fill low" style="width:25%"></div>
+                  </div>
+                  25%
+                </div>
+              </td>
+              <td>03</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <script src="/Javascript/dashboard.js"></script>
+  <script src="/Javascript/wristbands.js"></script>
+</body>
+</html>
