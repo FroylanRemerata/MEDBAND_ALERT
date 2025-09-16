@@ -1,0 +1,74 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh;
+  margin: 0;
+  text-align: center;
+}
+
+.forgot-pass-container{
+    border: 2px solid #3d7ca6;
+    border-radius: 15px;
+    padding: 40px;
+    
+}
+
+.forgot-pass-container h1{
+    margin: 0;
+    color: #3d7ca6;
+}
+.forgot-pass-container p{
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.forgot-pass-container input[type="text"]{
+  width: 90%;
+  padding: 10px;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  color: gray;
+  font-size: 40px;
+}
+
+.forgot-pass-container button{
+  width: 30%;
+  
+  padding: 10px;
+  background: #3d7ca6;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.code-input {
+  display: flex;
+  gap: 10px; 
+  justify-content: center;
+  width: 500px;
+  padding-bottom: 25px;
+}
+
+.code-input input {
+  width: 5px;
+  height: 30px;
+  text-align: center;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.code-input input:focus {
+  border-color: #3d7ca6; 
+}

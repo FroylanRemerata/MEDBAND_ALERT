@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Billing - Animal Bite Clinic</title>
+  <link rel="stylesheet" href="/CSS/dashy.css">
+  <link rel="stylesheet" href="/CSS/billing.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="dashboard">
+  
+
+    <main class="main-content">
+      
+      <header class="topbar">
+        <h1>Billing</h1>
+        <img src="/icons/profile.png" alt="Profile" class="profile-pic">
+      </header>
+
+      
+      <div class="billing-content">
+        
+        <div class="top-section">
+        
+        <div class="create-bill-card">
+          <h3>Create Bill</h3>
+          <div class="form-group">
+            <label for="patientSelect">Patient Name</label>
+            <div class="select-wrapper">
+              <select id="patientSelect">
+                <option value="01">Carlos Agasin (ID: 01)</option>
+                <option value="02">Maria Santos (ID: 02)</option>
+                <option value="03">Juan Dela Cruz (ID: 03)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="amountInput">Amount</label>
+            <input type="number" id="amountInput" placeholder="0.00" step="0.01">
+          </div>
+          <button class="create-bill-btn">Create Bill</button>
+        </div>
+
+        
+        <div class="recent-bills-card">
+          <h3>Recent Bills</h3>
+          <div class="bills-list">
+            <div class="bill-item">
+              <div class="bill-info">
+                <div class="bill-id">ID: 01</div>
+                <div class="bill-amount">₱ 0</div>
+                <div class="bill-date">2025-01-01</div>
+              </div>
+              <div class="bill-actions">
+                <span class="status unpaid">Unpaid</span>
+                <button class="mark-paid-btn">Mark Paid</button>
+              </div>
+            </div>
+            <div class="bill-item">
+              <div class="bill-info">
+                <div class="bill-id">ID: 02</div>
+                <div class="bill-amount">₱ 200</div>
+                <div class="bill-date">2025-01-01</div>
+              </div>
+              <div class="bill-actions">
+                <span class="status unpaid">Unpaid</span>
+                <button class="mark-paid-btn">Mark Paid</button>
+              </div>
+            </div>
+            <div class="bill-item">
+              <div class="bill-info">
+                <div class="bill-id">ID: 03</div>
+                <div class="bill-amount">₱ 500</div>
+                <div class="bill-date">2025-01-01</div>
+              </div>
+              <div class="bill-actions">
+                <span class="status paid">Paid</span>
+              </div>
+            </div>
+            <div class="bill-item">
+              <div class="bill-info">
+                <div class="bill-id">ID: 04</div>
+                <div class="bill-amount">₱ 500</div>
+                <div class="bill-date">2025-01-01</div>
+              </div>
+              <div class="bill-actions">
+                <span class="status paid">Paid</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="billing-history-section">
+        <h3>Billing History</h3>
+        <div class="table-container">
+          <table class="billing-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Patient</th>
+                <th>Amount</th>
+                <th>Status</th>
+                <th>Date Issued</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>03</td>
+                <td>Joraon Ades</td>
+                <td>₱ 500</td>
+                <td><span class="status-text paid">Paid</span></td>
+                <td>2025-01-01</td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td>Maria Santos</td>
+                <td>₱ 200</td>
+                <td><span class="status-text unpaid">Unpaid</span></td>
+                <td>2025-01-01</td>
+              </tr>
+              <tr>
+                <td>01</td>
+                <td>Carlos Agasin</td>
+                <td>₱ 0</td>
+                <td><span class="status-text unpaid">Unpaid</span></td>
+                <td>2025-01-01</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="/Javascript/billing.js"></script>
+
+</body>
+</html>

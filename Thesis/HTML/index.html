@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Bite Clinic Dashboard</title>
+   
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+     <link rel="stylesheet" href="/CSS/dashy.css">
+    <script src="/Javascript/dashboard.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="/icons/meow_white.png" alt="Logo">
+                <h2>Animal Bite Clinic</h2>
+            </div>
+            <ul class="menu">
+                <li class="active" onclick="loadPage('pages/dashboard.html', this)">
+                    <img src="/icons/dash-icons/1.png" alt=""> Dashboard
+                </li>
+                <li onclick="loadPage('pages/animal_bite_record.html', this)">
+                    <img src="/icons/dash-icons/2.png" alt=""> Animal Bite Record
+                </li>
+                <li onclick="loadPage('pages/register.html', this)">
+                    <img src="/icons/dash-icons/3.png" alt=""> Register Patient
+                </li>
+                <li onclick="loadPage('pages/wristbands.html', this)">
+                    <img src="/icons/dash-icons/4.png" alt=""> Wristbands
+                </li>
+                <li onclick="loadPage('pages/checkins.html', this)">
+                    <img src="/icons/dash-icons/5.png" alt=""> Check-ins
+                </li>
+                <li onclick="loadPage('pages/billing.html', this)">
+                    <img src="/icons/dash-icons/6.png" alt=""> Billing/Payment
+                </li>
+                <li onclick="loadPage('pages/sms.html', this)">
+                    <img src="/icons/dash-icons/7.png" alt=""> SMS Notifications
+                </li>
+                <li onclick="loadPage('pages/report.html', this)">
+                    <img src="/icons/dash-icons/8.png" alt=""> Report & Analysis
+                </li>
+                <li onclick="loadPage('pages/emergency.html', this)">
+                    <img src="/icons/dash-icons/9.png" alt=""> Emergency Protocols
+                </li>
+            </ul>
+        </aside>
+
+        <main class="main-content" id="main-content">
+            </main>
+    </div>
+    <script>
+        function loadPage(url, element) {
+            fetch(url)
+                .then(res => res.text())
+                .then(html => {
+                    const mainContent = document.getElementById('main-content');
+                    mainContent.innerHTML = html;
+
+                    // Manually execute the dashboard script
+                    if (url.includes('dashboard.html')) {
+                        // Ensure Chart.js is loaded before initializing charts
+                        if (typeof Chart === 'undefined') {
+                            console.error('Chart.js is not available');
+                            return;
+                        }
+                        
+                        const script = document.createElement('script');
+                        script.src = '../Javascript/dashboard.js';
+                        mainContent.appendChild(script);
+
+                        // Call the chart initialization function after the script is loaded
+                        script.onload = () => {
+                            // Small delay to ensure DOM is ready
+                            setTimeout(() => {
+                                if (typeof initializeCharts === 'function') {
+                                    initializeCharts();
+                                } else {
+                                    console.error('initializeCharts function not found');
+                                }
+                            }, 100);
+                        };
+                    }
+                    
+                    // Add CSS & JS for animal bite record page
+                    if (url.includes('animal_bite_record.html')) {
+                        // CSS (avoid duplicates)
+                        if (!document.querySelector('link[href="/CSS/bite_record.css"]')) {
+                            const link = document.createElement('link');
+                            link.rel = 'stylesheet';
+                            link.href = '/CSS/bite_record.css';
+                            document.head.appendChild(link);
+                        }
+
+                        // JS (re-add cleanly each time to ensure handlers bind)
+                        const existing = document.getElementById('bite-record-js');
+                        if (existing) existing.remove();
+                        const script = document.createElement('script');
+                        script.src = '/Javascript/bite_record.js';
+                        script.id = 'bite-record-js';
+                        mainContent.appendChild(script);
+                    }
+
+                    // Add CSS for register page
+                    if (url.includes('register.html')) {
+                        if (!document.querySelector('link[href="/CSS/register.css"]')) {
+                            const link = document.createElement('link');
+                            link.rel = 'stylesheet';
+                            link.href = '/CSS/register.css';
+                            document.head.appendChild(link);
+                        }
+                    }
+                    
+                    // Add CSS & JS for checkins page
+                    if (url.includes('checkins.html')) {
+                        // CSS (avoid duplicates)
+                        if (!document.querySelector('link[href="/CSS/checkins.css"]')) {
+                            const link = document.createElement('link');
+                            link.rel = 'stylesheet';
+                            link.href = '/CSS/checkins.css';
+                            document.head.appendChild(link);
+                        }
+                        // JS (re-add cleanly each time to ensure handlers bind)
+                        const existing = document.getElementById('checkins-js');
+                        if (existing) existing.remove();
+                        const script = document.createElement('script');
+                        script.src = '/Javascript/checkins.js';
+                        script.id = 'checkins-js';
+                        mainContent.appendChild(script);
+                    }
+                    document.querySelectorAll('.menu li').forEach(li => li.classList.remove('active'));
+                    element.classList.add('active');
+                })
+                .catch(err => {
+                    document.getElementById('main-content').innerHTML = "<h2>Page not found</h2>";
+                    console.error("Error loading page:", err);
+                });
+        }
+        
+        window.onload = () => loadPage('pages/dashboard.html', document.querySelector('.menu li'));
+    </script>
+
+    
+</body>
+</html>
