@@ -1,0 +1,21 @@
+{
+  "name": "Animal Bite Clinic Dashboard",
+  "short_name": "BiteClinic",
+  "description": "Manage animal bite records, patients, and notifications.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1e3a8a",
+  "theme_color": "#1e3a8a",
+  "icons": [
+    {
+      "src": "/icons/meow_white.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/meow_icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+
+
+.search-container {
+  display: flex;
+  align-items: center;
+  width: 79em;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 8px 12px;
+  border: 1px solid #e0e0e0;
+  width: 20em;
+  max-width: 400px;
+}
+
+.search input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #333;
+  margin-left: 8px;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  width: 20em;
+}
+
+.search input::placeholder {
+  color: #666;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.btn-register {
+  background: #28a745;
+  color: white;
+  margin-left: 15px;
+  border-radius: 4px;
+}
+
+.btn-register:hover {
+  background: #218838;
+}
+
+
+.page-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin: 20px 0;
+}
+
+
+.wristbands-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+}
+
+
+.wristbands-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.wristbands-table thead {
+  background: #f8f9fa;
+}
+
+.wristbands-table th {
+  padding: 16px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.wristbands-table td {
+  padding: 16px;
+  font-size: 14px;
+  color: #333;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.wristbands-table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status.active {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status.inactive {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.battery {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.battery-bar {
+  width: 60px;
+  height: 8px;
+  border-radius: 4px;
+  background: #e9ecef;
+  overflow: hidden;
+}
+
+.battery-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.battery-fill.high {
+  background: linear-gradient(to right, #28a745, #20c997);
+}
+
+.battery-fill.mid {
+  background: linear-gradient(to right, #ffc107, #fd7e14);
+}
+
+.battery-fill.low {
+  background: linear-gradient(to right, #dc3545, #e83e8c);
+}
+
+
+@media (max-width: 768px) {
+  .wristbands-table {
+    font-size: 12px;
+  }
+  
+  .wristbands-table th,
+  .wristbands-table td {
+    padding: 12px 8px;
+  }
+  
+  .battery-bar {
+    width: 40px;
+    height: 6px;
+  }
+  
+  .page-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wristbands-table {
+    font-size: 11px;
+  }
+  
+  .wristbands-table th,
+  .wristbands-table td {
+    padding: 8px 4px;
+  }
+  
+  .battery {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  
+  .battery-bar {
+    width: 30px;
+  }
+}
