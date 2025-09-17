@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malaria Animal Bite Clinic Login</title>
+  <link rel="stylesheet" href="CSS/style.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="wrapper">
+  <h1>MALARIA ANIMAL BITE CLINIC</h1>
+  <div class="login-container">
+
+  <img src="icons/meow_icon.png" alt="Logo">
+
+    <h2>Malaria Animal Bite Clinic Login</h2>
+    <p>MedBandAlert</p>
+
+    <form>
+      <input type="text" placeholder="Enter username" required>
+      <input type="password" placeholder="Enter password" required>
+
+      <div class="options">
+        <label><input type="checkbox"> Remember me</label>
+      </div>
+
+      <button type="submit" class="login-btn">Login</button>
+    </form>
+
+
+    <div class="footer">
+      © 2025 Malaria Animal Bite Clinic. All rights reserved
+    </div>
+  </div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js/dist/umd/supabase.min.js"></script>
+  <script src="Javascript/Javascript/script.js"></script>
+  <script>
+    const supabaseUrl = 'https://YOUR_PROJECT_ID.supabase.co';
+    const supabaseKey = 'YOUR_ANON_KEY';
+    const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+  </script>
+</body>
+</html>
